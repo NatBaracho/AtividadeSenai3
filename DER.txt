@@ -1,0 +1,32 @@
+TABELA USUARIO{
+    ID chave primaira (pk)
+    Nome da Playlist
+    CPF
+}
+
+TABELA MUSICA{
+    ID chave primaira (pk)
+    Titulo 
+    Artista
+    Duração
+    Genero
+}
+
+TABELA PLAYLIST{
+    ID chave primaira (PK)
+    PUBLICA: TRUE,                       
+    DATA_CRIAÇAAO , 
+    USUARIO_ID (FK) 
+}
+
+
+TABELA PLAYLIST_MUSICA{
+    ID chave primaira (PK)
+    id_PLAYLIST chave estrangeira (FK)
+    id_MUSICA chave estrangeira (FK)
+}
+
+
+
+USUARIO |--------° PLAYLIST_MUSICA (USUARIO acessar a LISTA)
+PLAYLIST_MUSICAT °---------° MUSICA (LISTA CONTEM MUSICA)
